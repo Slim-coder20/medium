@@ -1,0 +1,72 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* variables  */
+:root {
+  --primary: #be2529;
+  --dark: #333;
+  --secondary: #0d0d0d;
+  --gray: #ddd;
+  --gray-light: #eee;
+  --gray-hint: #555;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/* General */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+}
+
+a {
+  font-size: 1.6rem;
+  color: var(--dark);
+  text-decoration: none;
+
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utility */
+
+.container {
+  display: block;
+  margin: auto;
+  max-width: 1100px;
+
+}
+
+/* Header */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+header .logo {
+  font-size: 3rem;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li a{
+  padding: 1rem;
+}
