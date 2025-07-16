@@ -24,6 +24,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 2rem;
+  color: var(--dark);
 }
 h1,
 h2,
@@ -35,14 +36,13 @@ h6 {
   margin: 1rem 0;
 }
 
-p{
+p {
   margin: 1rem 0;
 }
 
 h3 {
   font-size: 1.8rem;
-  font-weight: 400;
-
+ 
 }
 
 a {
@@ -63,8 +63,14 @@ img {
 .article-author {
   font-weight: 700;
   font-size: 1.4rem;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--gray);
+}
 
-  
+::placeholder {
+  color: var(--gray-hint);
 }
 
 /* Utility */
@@ -74,6 +80,7 @@ img {
   margin: auto;
   max-width: 1100px;
   height: 1500px;
+  padding: 0 1rem;
 }
 
 .text-primary {
@@ -84,7 +91,7 @@ img {
   opacity: 0.8;
 }
 
-.text-hint{
+.text-hint {
   color: var(--gray-hint);
   font-size: 1.2rem;
 }
@@ -103,10 +110,27 @@ img {
   border: 1px solid var(--primary);
   color: var(--primary);
 }
-
 .btn-light:hover {
   background: var(--primary);
   color: white;
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: white;
+  border: 1px solid var(--dark);
+}
+
+.btn-dark:hover{
+  border: 1px solid var(--dark);
+  background: white;
+  color: var(--dark);
+}
+
+
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 /* Header */
 
@@ -189,4 +213,47 @@ nav {
 }
 .article-small .text-hint {
   grid-column: span 2;
+}
+
+/* Section ads Panneau publicitaire  */
+
+.ads {
+  background: var(--gray-light);
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 200px 1fr auto 1fr;
+  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-areas: 
+  "img . . ."
+  "img . h1 ."
+  "img . p  ."
+  "img . form ."
+  "img . . ."
+  ;
+}
+.ads img {
+  grid-area: img;
+}
+
+.ads h1 {
+  grid-area: h1;
+  font-size: 4rem;
+}
+
+.ads p {
+  grid-area: p;
+}
+
+.ads form {
+  grid-area: form;
+}
+
+.ads form input {
+  background: var(--gray-light);
+  border: 0;
+  border-bottom: 1px solid var(--dark);
+  padding: 1rem 0;
+  margin-right: 1rem;
+  outline: 0;
+
 }
